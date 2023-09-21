@@ -55,7 +55,7 @@ final class APIClient {
 
 extension APIClient: ArticleListServiceProtocol {
     func fetchArticles() async throws -> [String] {
-        try await Task.sleep(nanoseconds: 10_000_000_000)
+        try await Task.sleep(nanoseconds: 2_000_000_000)
         return ["One", "Two", "Three"]
     }
 }

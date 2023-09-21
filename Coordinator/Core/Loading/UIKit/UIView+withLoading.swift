@@ -3,7 +3,6 @@ import UIKit
 extension UIView {
     @discardableResult
     func withLoading() -> UIKitLoadingView {
-        print(#function)
         let loadingView = UIKitLoadingView()
         addSubview(loadingView)
         NSLayoutConstraint.activate([

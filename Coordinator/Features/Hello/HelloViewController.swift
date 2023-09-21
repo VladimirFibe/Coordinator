@@ -31,9 +31,8 @@ class HelloViewController: BaseViewController {
             .sink { [weak self] event in
                 guard let self = self else { return }
                 switch event {
-                case let .ready(articles):
+                case .ready(_):
                     self.view.backgroundColor = .green
-                    print(articles)
                 }
             }.store(in: &bag)
     }
