@@ -132,7 +132,7 @@ public final class Router: RouterProtocol {
     }
 
     private func runCompletion(for controller: BaseViewControllerProtocol) {
-        guard let module = controller as? ViewController,
+        guard let module = controller as? HelloViewController,
               let completion = completions[module]
         else { return }
         completion()
