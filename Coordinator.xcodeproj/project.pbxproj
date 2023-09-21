@@ -16,6 +16,14 @@
 		022A97C22ABC228B00D6A9EA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C12ABC228B00D6A9EA /* AppCoordinator.swift */; };
 		022A97C42ABC22BD00D6A9EA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C32ABC22BD00D6A9EA /* BaseCoordinator.swift */; };
 		022A97C62ABC239600D6A9EA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C52ABC239600D6A9EA /* BaseViewController.swift */; };
+		022A97CC2ABC25E100D6A9EA /* BridgingCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C72ABC25E100D6A9EA /* BridgingCollectionReusableView.swift */; };
+		022A97CD2ABC25E100D6A9EA /* BridgedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C82ABC25E100D6A9EA /* BridgedView.swift */; };
+		022A97CE2ABC25E100D6A9EA /* BridgingRestrictedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C92ABC25E100D6A9EA /* BridgingRestrictedTableViewCell.swift */; };
+		022A97CF2ABC25E100D6A9EA /* BridgingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97CA2ABC25E100D6A9EA /* BridgingCollectionViewCell.swift */; };
+		022A97D02ABC25E100D6A9EA /* RestrictedUIHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97CB2ABC25E100D6A9EA /* RestrictedUIHostingController.swift */; };
+		022A97D32ABC276100D6A9EA /* InlineConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97D22ABC276100D6A9EA /* InlineConfigurable.swift */; };
+		022A97D52ABC282F00D6A9EA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97D42ABC282F00D6A9EA /* UIViewController+Extension.swift */; };
+		022A97D72ABC285400D6A9EA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97D62ABC285400D6A9EA /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		022A97C12ABC228B00D6A9EA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		022A97C32ABC22BD00D6A9EA /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		022A97C52ABC239600D6A9EA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		022A97C72ABC25E100D6A9EA /* BridgingCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingCollectionReusableView.swift; sourceTree = "<group>"; };
+		022A97C82ABC25E100D6A9EA /* BridgedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgedView.swift; sourceTree = "<group>"; };
+		022A97C92ABC25E100D6A9EA /* BridgingRestrictedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingRestrictedTableViewCell.swift; sourceTree = "<group>"; };
+		022A97CA2ABC25E100D6A9EA /* BridgingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingCollectionViewCell.swift; sourceTree = "<group>"; };
+		022A97CB2ABC25E100D6A9EA /* RestrictedUIHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestrictedUIHostingController.swift; sourceTree = "<group>"; };
+		022A97D22ABC276100D6A9EA /* InlineConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineConfigurable.swift; sourceTree = "<group>"; };
+		022A97D42ABC282F00D6A9EA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		022A97D62ABC285400D6A9EA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +78,10 @@
 		022A97A72ABC1FE600D6A9EA /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				022A97DB2ABC293B00D6A9EA /* Supporting Files */,
 				022A97BC2ABC216600D6A9EA /* Core */,
 				022A97C02ABC225C00D6A9EA /* App */,
-				022A97AC2ABC1FE600D6A9EA /* ViewController.swift */,
-				022A97B12ABC1FE800D6A9EA /* Assets.xcassets */,
-				022A97B32ABC1FE800D6A9EA /* LaunchScreen.storyboard */,
-				022A97B62ABC1FE800D6A9EA /* Info.plist */,
+				022A97DC2ABC295900D6A9EA /* Features */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -75,9 +89,11 @@
 		022A97BC2ABC216600D6A9EA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				022A97D12ABC25EA00D6A9EA /* Bridge */,
 				022A97BD2ABC217600D6A9EA /* Navigation */,
-				022A97C32ABC22BD00D6A9EA /* BaseCoordinator.swift */,
-				022A97C52ABC239600D6A9EA /* BaseViewController.swift */,
+				022A97D92ABC28F200D6A9EA /* Base */,
+				022A97DA2ABC290500D6A9EA /* Utilties */,
+				022A97D82ABC28CA00D6A9EA /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -98,6 +114,62 @@
 				022A97C12ABC228B00D6A9EA /* AppCoordinator.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		022A97D12ABC25EA00D6A9EA /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				022A97C82ABC25E100D6A9EA /* BridgedView.swift */,
+				022A97C72ABC25E100D6A9EA /* BridgingCollectionReusableView.swift */,
+				022A97CA2ABC25E100D6A9EA /* BridgingCollectionViewCell.swift */,
+				022A97C92ABC25E100D6A9EA /* BridgingRestrictedTableViewCell.swift */,
+				022A97CB2ABC25E100D6A9EA /* RestrictedUIHostingController.swift */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		022A97D82ABC28CA00D6A9EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				022A97D42ABC282F00D6A9EA /* UIViewController+Extension.swift */,
+				022A97D62ABC285400D6A9EA /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		022A97D92ABC28F200D6A9EA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				022A97C32ABC22BD00D6A9EA /* BaseCoordinator.swift */,
+				022A97C52ABC239600D6A9EA /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		022A97DA2ABC290500D6A9EA /* Utilties */ = {
+			isa = PBXGroup;
+			children = (
+				022A97D22ABC276100D6A9EA /* InlineConfigurable.swift */,
+			);
+			path = Utilties;
+			sourceTree = "<group>";
+		};
+		022A97DB2ABC293B00D6A9EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				022A97B12ABC1FE800D6A9EA /* Assets.xcassets */,
+				022A97B32ABC1FE800D6A9EA /* LaunchScreen.storyboard */,
+				022A97B62ABC1FE800D6A9EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		022A97DC2ABC295900D6A9EA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				022A97AC2ABC1FE600D6A9EA /* ViewController.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +244,19 @@
 			files = (
 				022A97BF2ABC219000D6A9EA /* Router.swift in Sources */,
 				022A97C42ABC22BD00D6A9EA /* BaseCoordinator.swift in Sources */,
+				022A97CF2ABC25E100D6A9EA /* BridgingCollectionViewCell.swift in Sources */,
 				022A97AD2ABC1FE600D6A9EA /* ViewController.swift in Sources */,
+				022A97D52ABC282F00D6A9EA /* UIViewController+Extension.swift in Sources */,
 				022A97C22ABC228B00D6A9EA /* AppCoordinator.swift in Sources */,
+				022A97D02ABC25E100D6A9EA /* RestrictedUIHostingController.swift in Sources */,
 				022A97A92ABC1FE600D6A9EA /* AppDelegate.swift in Sources */,
+				022A97D32ABC276100D6A9EA /* InlineConfigurable.swift in Sources */,
+				022A97CD2ABC25E100D6A9EA /* BridgedView.swift in Sources */,
+				022A97CE2ABC25E100D6A9EA /* BridgingRestrictedTableViewCell.swift in Sources */,
 				022A97C62ABC239600D6A9EA /* BaseViewController.swift in Sources */,
+				022A97D72ABC285400D6A9EA /* UIView+Extensions.swift in Sources */,
 				022A97AB2ABC1FE600D6A9EA /* SceneDelegate.swift in Sources */,
+				022A97CC2ABC25E100D6A9EA /* BridgingCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
