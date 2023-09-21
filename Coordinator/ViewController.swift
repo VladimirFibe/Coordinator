@@ -1,12 +1,11 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+extension ViewController {
+    override func setupViews() {
         view.backgroundColor = .green
     }
-
-
 }
 

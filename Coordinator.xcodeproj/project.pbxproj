@@ -12,6 +12,10 @@
 		022A97AD2ABC1FE600D6A9EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97AC2ABC1FE600D6A9EA /* ViewController.swift */; };
 		022A97B22ABC1FE800D6A9EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022A97B12ABC1FE800D6A9EA /* Assets.xcassets */; };
 		022A97B52ABC1FE800D6A9EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022A97B32ABC1FE800D6A9EA /* LaunchScreen.storyboard */; };
+		022A97BF2ABC219000D6A9EA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97BE2ABC219000D6A9EA /* Router.swift */; };
+		022A97C22ABC228B00D6A9EA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C12ABC228B00D6A9EA /* AppCoordinator.swift */; };
+		022A97C42ABC22BD00D6A9EA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C32ABC22BD00D6A9EA /* BaseCoordinator.swift */; };
+		022A97C62ABC239600D6A9EA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A97C52ABC239600D6A9EA /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		022A97B12ABC1FE800D6A9EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		022A97B42ABC1FE800D6A9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		022A97B62ABC1FE800D6A9EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		022A97BE2ABC219000D6A9EA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		022A97C12ABC228B00D6A9EA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		022A97C32ABC22BD00D6A9EA /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		022A97C52ABC239600D6A9EA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		022A97A72ABC1FE600D6A9EA /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				022A97A82ABC1FE600D6A9EA /* AppDelegate.swift */,
-				022A97AA2ABC1FE600D6A9EA /* SceneDelegate.swift */,
+				022A97BC2ABC216600D6A9EA /* Core */,
+				022A97C02ABC225C00D6A9EA /* App */,
 				022A97AC2ABC1FE600D6A9EA /* ViewController.swift */,
 				022A97B12ABC1FE800D6A9EA /* Assets.xcassets */,
 				022A97B32ABC1FE800D6A9EA /* LaunchScreen.storyboard */,
 				022A97B62ABC1FE800D6A9EA /* Info.plist */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		022A97BC2ABC216600D6A9EA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				022A97BD2ABC217600D6A9EA /* Navigation */,
+				022A97C32ABC22BD00D6A9EA /* BaseCoordinator.swift */,
+				022A97C52ABC239600D6A9EA /* BaseViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		022A97BD2ABC217600D6A9EA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				022A97BE2ABC219000D6A9EA /* Router.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		022A97C02ABC225C00D6A9EA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				022A97A82ABC1FE600D6A9EA /* AppDelegate.swift */,
+				022A97AA2ABC1FE600D6A9EA /* SceneDelegate.swift */,
+				022A97C12ABC228B00D6A9EA /* AppCoordinator.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022A97BF2ABC219000D6A9EA /* Router.swift in Sources */,
+				022A97C42ABC22BD00D6A9EA /* BaseCoordinator.swift in Sources */,
 				022A97AD2ABC1FE600D6A9EA /* ViewController.swift in Sources */,
+				022A97C22ABC228B00D6A9EA /* AppCoordinator.swift in Sources */,
 				022A97A92ABC1FE600D6A9EA /* AppDelegate.swift in Sources */,
+				022A97C62ABC239600D6A9EA /* BaseViewController.swift in Sources */,
 				022A97AB2ABC1FE600D6A9EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
